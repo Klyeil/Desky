@@ -1,0 +1,21 @@
+/* src/App.css */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* 반응형 디자인을 위한 미디어 쿼리 */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 10px;
+  }

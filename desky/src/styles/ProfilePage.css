@@ -1,0 +1,87 @@
+/* 전체 레이아웃 */
+.profile-page {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f5f7f8; /* 선택적인 배경 */
+    font-family: Arial, sans-serif;
+    padding: 20px; 
+  }
+  
+  /* 왼쪽 사이드바 */
+  .profile-sidebar {
+    width: 220px;
+    border-right: 2px solid #eee;
+    padding: 20px;        /* 사이드바 내부 여백 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* 헤더와 메뉴가 가운데 정렬 */
+  }
+  
+  /* 프로필 헤더 (이미지+닉네임) */
+  .sidebar-headerr {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .sidebar-profile-images {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ddd;
+    margin-bottom: 10px;
+  }
+  
+  .sidebar-nickname {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* 사이드 메뉴 아이템 */
+  .menu-itemm {
+    width: 100%;
+    font-size: 16px;
+    color: #333;
+    padding: 16px 0;
+    text-align: center;
+    border-bottom: 2px solid #f0f0f0;
+    cursor: pointer;
+  }
+  
+  .menu-item:last-child {
+    border-bottom: none;
+  }
+  
+  .menu-item:hover {
+    color: #7655E3;
+  }
+  
+  /* 오른쪽 탭 콘텐츠 */
+  .profile-content {
+    flex: 1;           /* 나머지 공간 차지 */
+    padding: 20px;
+    margin-left: 20px; /* 사이드바와 간격 */
+    border-radius: 8px;
+    margin: 0 auto;
+  
+  }
+  
+  /* 에러 메시지 */
+  .error-message {
+    color: red;
+    margin-bottom: 10px;
+  }
+
+  .profile-placeholder {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }

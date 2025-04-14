@@ -1,0 +1,227 @@
+/* 공통 리셋(필요 시) */
+
+/* 전체 페이지 스타일 */
+.cart-pages {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* 상단 헤더 */
+  .cart-header {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .cart-title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* 전체선택/선택삭제/장바구니 비우기 영역 */
+  .cart-header-actions {
+    display: flex;
+    align-items: center;
+    max-width: 600px;
+    white-space: nowrap;
+    gap: 10px;
+  }
+  
+  .cart-header-actions input[type="checkbox"] {
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  
+  .header-action-link {
+    cursor: pointer;
+    color: #555;
+    font-size: 14px;
+  }
+  
+  .header-action-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* 메인 컨테이너: 왼쪽(상품 리스트), 오른쪽(주문 요약) */
+  .cart-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    gap: 20px;
+  }
+  
+  /* 장바구니 아이템 섹션 */
+  .cart-items-section {
+    flex: 2;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  
+  /* 개별 아이템 */
+  .cart-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding: 20px 0;
+  }
+  
+  .cart-item:last-child {
+    border-bottom: none;
+  }
+  
+  .cart-item input[type="checkbox"] {
+    margin-right: 25px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+  }
+  
+  .cart-item-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 3px;
+    margin-right: 20px;
+  }
+  
+  .cart-item-details {
+    flex: 1;
+  }
+  
+  .cart-item-details h3 {
+    margin: 0 0 8px 0;
+    font-size: 16px;
+  }
+  
+  .cart-item-options {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #777;
+  }
+  
+  .cart-item-actions {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  /* 수량 컨트롤 */
+  .quantity-control {
+    height: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .quantity-btn {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: black;
+    font-family: "Courier New", Courier, monospace;
+  }
+  
+  .quantity-btn:hover {
+    background-color: #fff;
+  }
+  
+  .quantity-num {
+    width: 32px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    background-color: #fff;
+    color: black;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+  }
+  
+  .cart-item-price {
+    color: dimgray;
+    width: 160px;
+    text-align: right;
+    font-weight: bold;
+    font-size: 16px;
+    margin-left: 20px;
+  }
+  
+  .remove-item-btn {
+    width: auto;
+    font-size: 18px;
+    background: none;
+    border: none;
+    color: #e04e4e;
+    cursor: pointer;
+    margin-left: 20px;
+  }
+  
+  /* 주문 요약 섹션 */
+  .cart-summary-section {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    height: fit-content;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  
+  .cart-summary-section h2 {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+  
+  .summary-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .summary-details p,
+  .summary-details h3 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  .summary-details h3 {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .checkout-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .checkout-btn.secondary {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+  }
+  
+  .checkout-btn:hover {
+    opacity: 0.9;
+  }

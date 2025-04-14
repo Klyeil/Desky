@@ -1,0 +1,361 @@
+.feed-upload-container {
+    max-width: 1000px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .upload-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  /* 박스 섹션 */
+  .box-section {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+  }
+  
+  /* 이미지 업로드 */
+  .image-upload-area {
+    border: 2px dashed #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+    background-color: #ffffff;
+  }
+  
+  .image-upload-area p{
+    color: #6B7280;
+  }
+  
+  .image-upload-area:hover {
+    border-color: #007bff;
+  }
+  
+  .image-preview {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+  
+  .file-select-button {
+    margin: auto;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  /* 폼 그룹 */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  textarea {
+    resize: none;
+    height: 100px;
+  }
+  
+  /* 제품 검색 및 버튼 한 줄 배치 */
+  .product-search-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .product-search-area input {
+    flex: 1;
+  }
+  
+  .product-search-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .add-product-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+  }
+  
+  /* 업로드 버튼 */
+  .button-group {
+    text-align: center;
+  }
+  
+  .submit-button {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background-color: #0056b3;
+  }
+  
+  
+  .upload-icon {
+    margin: 0 auto;
+    font-size: 50px;
+    color: #aaa;
+    margin-bottom: 10px;
+  }
+  
+  
+  /* 선택된 제품 목록 */
+  .product-list ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .product-list li {
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* FeedUpload.css */
+  
+  /* 팝업 창의 뒷배경 어둡게 처리 */
+  .product-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999; /* 팝업 내용보다 뒤에 있어야 함 */
+  }
+  
+  /* 팝업 창 스타일 */
+  .product-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    max-width: 600px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* 팝업 배경보다 위에 있어야 함 */
+  }
+  
+  .popup-content {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  
+  .product-group li{
+    display: flex;
+  }
+  
+  .popup-content h3 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .product-select-button,
+  .close-popup-button {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    margin-top: 10px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .product-select-button:hover,
+  .close-popup-button:hover {
+    background-color: #000;
+  }
+  
+  
+  
+  
+  /* FeedUpload.css */
+  
+  /* 제품 선택 섹션 (box-section) */
+  .product-selection-section {
+    position: relative;
+    /* 기존 box-section 기본 스타일 상속 */
+  }
+  
+  .product-selection-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* 왼쪽에 타이틀, 오른쪽에 +버튼 */
+    margin-bottom: 10px;
+  }
+  
+  .product-selection-header h3 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  /* + 제품 추가 버튼 */
+  .add-product-btns {
+    width: auto;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .add-product-btns:hover {
+    background-color: #000;
+  }
+  
+  /* 선택된 제품 목록 ul */
+  .selected-product-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .selected-product-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 6px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .selected-product-item:last-child {
+    border-bottom: none;
+  }
+  
+  .product-info {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .product-named {
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .product-brand {
+    color: #666;
+  }
+  
+  /* 제거 버튼 */
+  .remove-product-button {
+    width: auto;
+    background-color: #e04e4e;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .remove-product-button:hover {
+    background-color: #c13f3f;
+  }
+  
+  .product-list-check {
+    list-style: none;     /* 불릿 제거 */
+    padding: 0;           /* 기본 ul 패딩 제거 */
+    margin: 0;
+  }
+  
+  /* 각 아이템을 한 줄에 정렬 */
+  .product-item-check {
+    display: flex;
+    align-items: center;  /* 수직 가운데 정렬 */
+    gap: 8px;             /* 체크박스와 제품명 사이 간격 */
+    padding: 8px 0;       /* 아이템 간 세로 간격 */
+    border-bottom: 1px solid #eee;
+  }
+  
+  .product-item-check:last-child {
+    border-bottom: none;
+  }
+  
+  .product-item-check input[type='checkbox'] {
+    /* 필요하면 크기/간격 조절 */
+    width: auto;
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+  
+  .product-item-check .product-named {
+    /* 원하는 스타일 */
+    font-size: 14px;
+    color: #333;
+  }
+  
+  

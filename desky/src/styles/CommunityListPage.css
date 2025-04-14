@@ -1,0 +1,170 @@
+/* 페이지 전체를 감싸는 컨테이너(페이지 배경) */
+body {
+    background-color: #f8f9fa;
+}
+.community-page {
+    width: 100%;
+    max-width: 1376px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+  }
+  
+  /* 페이지 상단 타이틀과 서브 타이틀 */
+  .community-main-title {
+    text-align: justify;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  
+  /* th, td에 기본 보더 제거 */
+.community-table th, .community-table td {
+    border: none;
+  }
+
+  .community-subtitle {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 24px;
+  }
+
+  /* thead 배경은 투명(또는 원하는 색)으로 */
+.community-table thead tr {
+    background-color: transparent;
+  }
+  
+  /* 테이블 자체에 별도 박스나 배경을 두지 않고,
+     페이지 배경과 같은 색(#f9f9f9)을 그대로 사용해 일체감 부여 */
+  .community-table {
+    border: 1px solid #ddd;
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    /* 열 너비 제어를 위해 table-layout: fixed 또는 auto 사용 가능 1376
+       여기서는 아래에서 th별 width를 지정하므로 fixed가 유리 */
+    table-layout: fixed; 
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* 열 별 폭 지정 (No가 가장 짧고, 제목이 가장 넓게) */
+  .community-table thead th:nth-child(1) {
+    width: 4%;   /* No */
+  }
+  .community-table thead th:nth-child(2) {
+    width: 62%;  /* 제목 (가장 길게) */
+  }
+  .community-table thead th:nth-child(3) {
+    width: 9%;  /* 글쓴이 */
+  }
+  .community-table thead th:nth-child(4) {
+    width: 9%;  /* 작성일 */
+  }
+  .community-table thead th:nth-child(5) {
+    width: 6%;  /* 조회수 */
+  }
+  .community-table thead th:nth-child(6) {
+    width: 6%;  /* 추천수 */
+  }
+  
+  /* 헤더 스타일 */
+  .community-table thead th {
+    text-align: left;
+    padding: 12px;
+    background-color: #f8f9fa; /* 조금 더 밝은 톤의 헤더 */
+    border-bottom: 1px solid #ddd;
+    font-weight: 600;
+    color: #6B7280;
+  }
+  
+  /* 바디 스타일 */
+  .community-table tbody tr {
+    border-bottom: 1px solid #eee;
+    background-color: #fff;
+    transition: background-color 0.2s;
+  }
+  
+  /* 행에 마우스오버 시 살짝 배경 강조 */
+  .community-table tbody tr:hover {
+    background-color: #fff;
+    cursor: pointer;
+  }
+  
+  .community-table td {
+    color: #6B7280;
+    text-align: left;
+    padding: 12px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    /* table-layout: fixed; + ellipsis를 쓰면 길이가 긴 내용은 잘립니다. */
+  }
+  
+  /* 링크 스타일 */
+  .community-table a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  .community-table a:hover {
+    text-decoration: underline;
+  }
+  
+  /* 하단 푸터: 페이지네이션 + 글쓰기 버튼 */
+  .community-footer {
+    display: flex;
+    align-items: center;
+  }
+  
+/* 페이지네이션을 가로로 가운데 정렬 */
+.community-pagination {
+    margin: 0 auto;            /* 부모(.community-footer)가 flex이므로 수평 중앙에 위치 */
+    display: flex;            /* 화살표와 숫자를 가로로 배치 */
+    align-items: center;
+    gap: 10px;                /* 아이템 간 간격 */
+  }
+  
+  /* 왼/오 화살표 버튼 스타일 */
+  .page-arrow {
+    width: 36px;
+    height: 36px;
+    display: flex;              /* 자식 요소(텍스트)를 flex 컨테이너로 */
+    align-items: center;        /* 수직 중앙 정렬 */
+    justify-content: center;    /* 수평 중앙 정렬 */
+    color: #788189;
+    border: none;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .page-arrow:hover {
+    background-color: #f8f9fa;
+  }
+  
+  /* 가운데 페이지 번호 스타일 (원하시면 폰트 크기 등 조정 가능) */
+  .page-number {
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+  }
+  
+  
+
+
+  /* 글쓰기 버튼 */
+  .community-write-button {
+    width: auto;
+    padding: 10px 16px;
+    font-size: 14px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .community-write-button:hover {
+    background-color: #333;
+  }
+  
