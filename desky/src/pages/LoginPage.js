@@ -12,7 +12,7 @@ function LoginPage() {
   const { login, loading } = useContext(AuthContext);
 
   const handleLogin = async (e) => {
-    e.preventDefault(); // 폼 제출 기본 동작 방지
+    e.preventDefault(); // 새로고침 방지
     try {
       await login(email, password);
       navigate('/');
@@ -21,7 +21,7 @@ function LoginPage() {
     }
   };
 
-  if (loading) return <div>로딩 중...</div>;
+  if (loading) return <div>로딩 중</div>;
 
   return (
     <div className="main-page">
@@ -70,3 +70,4 @@ function LoginPage() {
 }
 
 export default LoginPage;
+

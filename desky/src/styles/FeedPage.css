@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 40px 20px;
   }
   
   .feed-main-title {
@@ -13,9 +13,13 @@
     font-weight: 700;
     margin-bottom: 8px;
   }
+
   
   .title {
-    margin-top: 30px;
+    display: flex;
+    justify-content: space-between; /* 텍스트와 버튼을 양쪽으로 분리 */
+    align-items: center; /* 수직 중앙 정렬 */
+    margin-bottom: 20px;
   }
   
   .feed-subtitle {
@@ -38,6 +42,7 @@
   }
   
   .upload-button {
+    margin-right : 70px;
     margin-bottom: 20px;
     width: auto;
     padding: 8px 16px;
@@ -50,7 +55,7 @@
   }
   
   .upload-button:hover {
-    background-color: #357abd;
+    background-color: #000000;
   }
   
   /* 그리드 스타일 */

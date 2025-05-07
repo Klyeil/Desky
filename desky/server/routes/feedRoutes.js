@@ -35,10 +35,12 @@ router.post('/upload', auth, upload.single('image'), async (req, res) => {
       return res.status(400).json({ msg: '이미지를 업로드해주세요.' });
     }
 
+    const imageUrl = `/uploads/${req.file.filename}`;
+    console.log('Saving image URL:', imageUrl);
     const feed = new Feed({
       title,
       content,
-      image: req.file.path,
+      image: imageUrl,
       author: req.user,
     });
     await feed.save();
@@ -49,14 +51,30 @@ router.post('/upload', auth, upload.single('image'), async (req, res) => {
   }
 });
 
-// 내 피드 조회 (새 엔드포인트)
+// 모든 피드 조회 (경로 수정: /feeds -> /)
+router.get('/', async (req, res) => {
+  try {
+    const feeds = await Feed.find()
+      .populate('author', 'nickname profileImage')
+      .populate('products')
+      .populate('comments.author', 'nickname profileImage')
+      .sort({ createdAt: -1 });
+    res.json(feeds);
+  } catch (err) {
+    console.error('피드 조회 에러:', err);
+    res.status(500).json({ msg: '서버 오류', error: err.message });
+  }
+});
+
+// 내 피드 조회
 router.get('/my-feeds', auth, async (req, res) => {
   try {
+    console.log('Fetching feeds for user:', req.user);
     const feeds = await Feed.find({ author: req.user })
       .populate('author', 'nickname profileImage')
       .populate('products')
       .populate('comments.author', 'nickname profileImage')
-      .sort({ createdAt: -1 }); // 최신순 정렬
+      .sort({ createdAt: -1 });
     res.json(feeds);
   } catch (err) {
     console.error('내 피드 조회 에러:', err);
@@ -67,6 +85,7 @@ router.get('/my-feeds', auth, async (req, res) => {
 // 피드 상세 조회
 router.get('/:id', auth, async (req, res) => {
   try {
+    console.log('Fetching feed with ID:', req.params.id);
     const feed = await Feed.findById(req.params.id)
       .populate('author', 'nickname profileImage')
       .populate('products')
