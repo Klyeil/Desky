@@ -1,6 +1,5 @@
 /* 페이지 전체 스타일 */
 .feed-page {
-    font-family: 'Arial', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;

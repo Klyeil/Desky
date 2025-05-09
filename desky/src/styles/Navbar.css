@@ -1,179 +1,181 @@
 /* src/styles/Navbar.css */
 
 .navbar {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: #000;
-    z-index: 1000;
-    height: 45px;
-  }
-  
-  
-  .navbar .nav_logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .logo {
-    display: flex;
-    align-items: center;
-    color: inherit;
-  }
-  
-  .logo-image {
-    width: 24%;
-    height: auto;
-  }
-  
-  .nav-links {
-    display: flex;
-    gap: 1.5rem; /* 간격을 1.5rem으로 조정 */
-  }
-  
-  .nav-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2rem;
-  }
-  
-  .nav-link:hover {
-    color: #007bff;
-  }
-  
-  .nav-link svg {
-    margin-right: 0.5rem;
-  }
-  
-  
-  
-  /* User Icon and Dropdown Menu */
-  .nav-link.user-icon {
-    position: relative; /* 드롭다운 메뉴를 상대적으로 위치시키기 위해 */
-  }
-  
-  .dropdown-menu {
-    position: absolute;
-    top: 200%; /* 아이콘 바로 아래에 위치 */
-    right: 0;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 140px; /* 메뉴 넓이 */
-    border-radius: 8px;
-    padding: 0.5rem 0;
-    display: flex;
-    flex-direction: column;
-    z-index: 9999;
-    visibility: hidden; /* 기본적으로 메뉴 숨기기 */
-    opacity: 0;
-    transition: opacity 0.3s ease, visibility 0s 0.3s; /* 애니메이션 추가 */
-  }
-  
-  .dropdown-menu.visible {
-    visibility: visible; /* 메뉴 보이게 하기 */
-    opacity: 1;
-    transition: opacity 0.3s ease; /* 애니메이션 속도 */
-  }
-  
-  .dropdown-item {
-    display: flex; /* flexbox로 정렬 */
-    align-items: center; /* 수직 중앙 정렬 */
-    justify-content: center; /* 수평 중앙 정렬 */
-    padding: 0.8rem 1rem;
-    color: #333;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.2s ease, color 0.2s ease;
-    border-bottom: 1px solid #f1f1f1;
-  }
-  
-  .dropdown-item:last-child {
-    border-bottom: none;
-  }
-  
-  .dropdown-item:hover {
-    background-color: #f1f1f1;
-    color: #007bff;
-  }
-  
-  
-  .center-menu {
-    margin-right: 100px;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    gap: 3rem; /* 메뉴 간격 */
-    justify-content: center; /* 가운데 정렬 */
-    flex: 0; /* 남은 공간을 차지하여 가운데 배치 */
-  }
-  
-  .center-menu li {
-    font-size: 1rem;
-    font-weight: 500;
-  }
-  
-  .center-menu a {
-    font-size: 17px;
-    text-decoration: none;
-    color: #fff;
-    transition: color 0.3s ease;
-  }
-  
-  .center-menu a:hover {
-    color: #007bff;
-  }
-  
-  
-  .nav-right {
-    display: flex;
-    gap: 18px;
-  }
-  
-  .nav-button {
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 500;
-    color: #fff;
-    cursor: pointer;
-  }
-  
-  .nav-button:hover {
-    color: #fff;
-  }
-  
-  .login-link {
-    display: flex;
-    align-items: center;
-    transition: color 0.3s ease;
-    gap: 7px;
-  }
-  
-  .login-link:hover {
-    color: #007bff;
-  }
-  
-  .logout-link:hover {
-    color: #007bff;
-  }
-  
-  .logout-link {
-    display: flex;
-    align-items: center;
-    transition: color 0.3s ease;
-    gap: 7px;
-  }
-  .login-icon {
-    font-size: 20px;
-  }
-  
-  .cart-icon {
-    font-size: 16px;
-  }
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #000;
+  z-index: 1000;
+  height: 50px;
+}
+
+
+.navbar .nav_logo {
+  margin-right: 60px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: inherit;
+}
+
+.logo-image {
+  width: 42px;
+  height: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem; /* 간격을 1.5rem으로 조정 */
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.nav-link:hover {
+  color: #007bff;
+}
+
+.nav-link svg {
+  margin-right: 0.5rem;
+}
+
+
+
+/* User Icon and Dropdown Menu */
+.nav-link.user-icon {
+  position: relative; /* 드롭다운 메뉴를 상대적으로 위치시키기 위해 */
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 200%; /* 아이콘 바로 아래에 위치 */
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 140px; /* 메뉴 넓이 */
+  border-radius: 8px;
+  padding: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 9999;
+  visibility: hidden; /* 기본적으로 메뉴 숨기기 */
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0s 0.3s; /* 애니메이션 추가 */
+}
+
+.dropdown-menu.visible {
+  visibility: visible; /* 메뉴 보이게 하기 */
+  opacity: 1;
+  transition: opacity 0.3s ease; /* 애니메이션 속도 */
+}
+
+.dropdown-item {
+  display: flex; /* flexbox로 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
+  justify-content: center; /* 수평 중앙 정렬 */
+  padding: 0.8rem 1rem;
+  color: #333;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.dropdown-item:hover {
+  background-color: #f1f1f1;
+  color: #007bff;
+}
+
+
+.center-menu {
+  white-space:nowrap;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 60px; /* 메뉴 간격 */
+  justify-content: center; /* 가운데 정렬 */
+  flex: 0; /* 남은 공간을 차지하여 가운데 배치 */
+}
+
+.center-menu li {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.center-menu a {
+  font-size: 16px;
+  font-weight : 600;
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.center-menu a:hover {
+  color: #007bff;
+}
+
+
+.nav-right {
+  display: flex;
+  margin-left: auto;
+  gap: 32px;
+}
+
+.nav-button {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+}
+
+.nav-button:hover {
+  color: #fff;
+}
+
+.login-link {
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+  gap: 7px;
+}
+
+.login-link:hover {
+  color: #007bff;
+}
+
+.logout-link:hover {
+  color: #007bff;
+}
+
+.logout-link {
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+  gap: 7px;
+}
+.login-icon {
+  font-size: 20px;
+}
+
+.cart-icon {
+  font-size: 16px;
+}

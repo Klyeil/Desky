@@ -18,19 +18,19 @@ function Navbar() {
     <nav className="navbar">
       {/* 로고 */}
       <Link to="/" className="nav_logo">
-        <img src="/mainicon.png" alt="Desky Logo" className="logo-image" />
+        <img src="/main_icon.png" alt="Desky Logo" className="logo-image" />
       </Link>
 
       {/* 센터 메뉴 */}
       <ul className="center-menu">
         <li>
-          <Link to="/products">Shop</Link>
+          <Link to="/products">1:1 컨설팅</Link>
         </li>
         <li>
-          <Link to="/community">Community</Link>
+          <Link to="/community">커뮤니티</Link>
         </li>
         <li>
-          <Link to="/desk">Setup</Link>
+          <Link to="/desk">데스크 셋업</Link>
         </li>
       </ul>
 
@@ -38,6 +38,7 @@ function Navbar() {
       <div className="nav-right">
         {user ? (
           <>
+          
             <Link to="/profile" className="nav-button login-link">
               <FaRegUser className="user-icon" />
               마이페이지
